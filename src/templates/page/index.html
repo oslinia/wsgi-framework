@@ -1,0 +1,18 @@
+{% extends 'template/main.html' %}
+
+{% block content %}
+    <p>{{ name }}</p>
+    <ul>
+        <li>{{ url_path('style.css') }}</li>
+        <li>{{ url_for('index') }}</li>
+        <li>{{ url_for('query') }}</li>
+        <li>{{ url_for('error') }}</li>
+        <li>{{ url_for('pages', name='index.html') }}</li>
+        <li>{{ url_for('archive', year='2025') }}</li>
+        <li>{{ url_for('archive', year='2025', month='02', error='23') }}</li>
+        <li>{{ url_for('archive', year='2025', month='02', day='23', error='23') }}</li>
+        <li>{{ url_for('archive', year='2025', month='02') }}</li>
+        <li>{{ error }}</li>
+        <li>{{ url_for('archive', year='2025', month='02', day='23') }}</li>
+    </ul>
+{% endblock %}

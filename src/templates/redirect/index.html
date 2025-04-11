@@ -1,0 +1,22 @@
+{% extends 'template/main.html' %}
+
+{% block content %}
+    <style>
+        .list {
+            margin: 0;
+            padding: 0 0 0 16px;
+            list-style: none;
+        }
+        .list li:first-child {
+            padding-top: 0;
+        }
+        .list li {
+            padding-top: 10px;
+        }
+    </style>
+    <p>Redirect</p>
+    <ul class="list">
+        <li><a href="{{ url_for('redirect', name='index.html') }}" target="_blank">redirect page-index</a></li>
+        <li><a href="{{ url_for('redirect', name='middle.html') }}" target="_blank">redirect page-middle</a></li>
+    </ul>
+{% endblock %}
