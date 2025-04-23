@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="{{ lang }}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Redirect page</title>
+    <style>
+        .list {
+            margin: 0;
+            padding: 0 0 0 16px;
+            list-style: none;
+        }
+        .list li:first-child {
+            padding-top: 0;
+        }
+        .list li {
+            padding-top: 10px;
+        }
+    </style>
+</head>
+<body>
+<p>Redirect:</p>
+<ul class="list">
+    <li><a href="{{ url_for('redirect', name='index.html') }}">redirect page-index</a></li>
+    <li><a href="{{ url_for('redirect', name='middle.html') }}">redirect page-middle</a></li>
+</ul>
+</body>
+</html>
